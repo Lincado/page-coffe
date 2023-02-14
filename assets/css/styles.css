@@ -1,0 +1,101 @@
+:root {
+    --white: #FFFFFF;
+    --black: #000000;
+    --soft-violet: #8257E5;
+}
+
+@import url('https://fonts.googleapis.com/css2?family=Manrope:wght@400;700&display=swap');
+
+* {
+    font-size: 62.5%;
+    font-family: "Manrope", sans-serif;
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    scroll-behavior: smooth;
+}
+
+a {
+    text-decoration: none;
+    font-size: 1.4rem;
+    color: var(--white);
+}
+
+.main-container {
+    background: url("../img/primary-bg.svg");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 100vw;
+    height: 100vh;    
+}
+
+.menu {
+    display: flex;
+    flex-flow: row wrap;
+    align-items: center;
+    justify-content: space-between;
+    padding-top: 2rem;
+    max-width: 120rem;
+    margin: 0 auto;
+    padding-left: 12rem;
+}
+
+.logo {
+    max-width: 4.4rem;
+    height: auto;
+}
+
+.logo img {
+    width: 100%;
+    height: auto;
+}
+
+
+.menu ul{
+    display: flex;
+    flex-flow: row wrap;
+    list-style: none;
+    justify-self: center;
+} 
+
+.menu li{
+    padding: 2rem;
+} 
+
+.btn-get-my-coffe {
+    border: solid .1rem var(--soft-violet);
+    border-radius: .6rem;
+    padding: 1.3rem 2.2rem;
+}
+
+.text-info {
+    display: flex;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+    padding-top: 2.8rem;
+}
+
+.text-info h1 {
+    font-size: 8rem;
+    color: var(--white);
+}
+
+.text-info p {
+    font-size: 8rem;
+    color: transparent;
+    -webkit-text-stroke: .2rem var(--soft-violet);
+}
+
+.img-coffe {
+    display: flex;
+    margin: 0 auto;
+    align-items: flex-end;
+    width: 67rem;
+}
+
+.img-coffe img {
+    max-width: 100%;
+    min-height: auto;
+}
