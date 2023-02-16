@@ -12,7 +12,7 @@
     box-sizing: border-box;
     margin: 0;
     padding: 0;
-    scroll-behavior: smooth;
+    
 }
 
 a {
@@ -26,22 +26,28 @@ a {
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
-    width: 100vw;
-    height: 100vh;  
-    padding: 2rem 2rem; 
-    display: flex; 
+    width: 100%;
+    min-height: 100vh;  
+    padding: 0 4rem; 
+    display: flex;
     flex-direction: column;
     justify-content: space-between;
+    align-items: center;
+    
 }
 
 .menu {
+    padding-top: 2rem;
     display: flex;
     flex-flow: row wrap;
     align-items: center;
     justify-content: space-between;
-    width: 110rem;
-    margin: 0 auto;
-    padding-left: 12rem;
+    width: calc(100% - 30%);
+    margin-left: 8%;
+}
+
+#btn-menu-mobile {
+    display: none;
 }
 
 .logo {
@@ -65,21 +71,25 @@ a {
     padding: 2rem;
 } 
 
-.btn-get-my-coffee {
+.btn-my-coffee {
     border: solid .1rem var(--soft-violet);
     border-radius: .6rem;
     padding: 1.3rem 2.2rem;
 }
 
+.text-mobile {
+    display: none;
+}
+
 .text-info {
     display: flex;
     text-align: center;
-    justify-content: center;
+    margin: 0 auto;
     align-items: center;
     padding-top: 2.8rem;
 }
 
-.text-info h1 {
+.text-info h2 {
     font-size: 8rem;
     color: var(--white);
 }
@@ -94,10 +104,67 @@ a {
     display: flex;
     margin: 0 auto;
     align-items: flex-end;
-    width: 67rem;
+    max-width: 67rem;
 }
 
 .img-coffee img {
-    max-width: 100%;
-    min-height: auto;
+    width: 100%;
+    height: auto;
+}
+
+@media (max-width: 950px) {
+    #menu-content {
+        display: none;
+        flex-direction: column;
+    }
+
+    #btn-menu-mobile{
+        display: block;
+    }
+    
+    #nav.active #menu-content {
+        display: flex;        
+    }
+}
+
+@media (max-width: 550px) {
+    .main-container{
+        gap: 5rem;
+        background: url("../img/mobile-bg.svg");
+    }
+
+    .btn-my-coffee {
+        display: none;
+    }
+
+    .btn-my-coffee-mobile {
+        border: solid .1rem var(--soft-violet);
+        border-radius: .6rem;
+        padding: 1.3rem 2.2rem;
+        width: 20rem;
+        height: 4rem;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin: 0 auto;
+    }
+
+    .text-mobile {
+        display: flex;
+        flex-direction: column;
+        gap: 5rem;
+        max-width: 40rem;
+        justify-content: center;
+    }
+
+    .text-mobile h1 {
+        font-size: 3rem;
+        color: var(--white);
+        text-align: center;
+    }
+
+    .text-info h2,
+    .text-info p {
+        font-size: 5rem;
+    }
 }
