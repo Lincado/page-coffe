@@ -54,11 +54,13 @@ a {
 .logo {
     max-width: 4.4rem;
     height: auto;
+    
 }
 
 .logo img {
     width: 100%;
     height: auto;
+    transition: all 300ms ease-in-out;
 }
 
 
@@ -143,7 +145,6 @@ a {
     height: auto;
 }
 
-
 @media (max-width: 950px) {
     .menu {
         width: 100%;
@@ -156,7 +157,7 @@ a {
         display: none;
         flex-direction: column;
         position: absolute;
-        top: 2rem;
+        top: 0rem;
         width: 100%;
         height: calc(100vh - 2rem);
         left: 0;
@@ -170,8 +171,7 @@ a {
         border-top: .1rem var(--very-dark-blue) solid;
     }
     
-    #menu-content li:nth-child(6) {
-        padding-top: 4rem;
+    #menu-content li {
         padding-left: 2rem;
     }
 
