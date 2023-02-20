@@ -15,3 +15,25 @@ function toggleMenu (event) {
 }
 
 btnMenuMobile.addEventListener("click", toggleMenu)
+
+const header = document.querySelector(".menu")
+const divLogo = document.querySelector(".logo")
+const divBuyMyCoffee = document.createElement("div")
+const ul = document.querySelector("ul")
+const main = document.querySelector("main")
+
+divBuyMyCoffee.innerHTML = `<a href="#" class="btn-my-coffee">PEGAR MEU CAFÉ</a>`
+
+
+function widthPositionBtnCoffe(){
+    if(window.matchMedia("(min-width: 951px)").matches) {
+        divLogo.innerHTML = `<img src="./assets/img/logo-desktop.svg" alt="logo da loja de café">`
+        header.insertBefore(divBuyMyCoffee, ul.nextElementSibling)
+    } else {
+        divLogo.innerHTML = `<img src="./assets/img/logo-mobile.svg" alt="logo da loja de café">`
+        main.insertBefore(divBuyMyCoffee, header.nextElementSibling)
+    }
+}
+
+widthPositionBtnCoffe()
+window.addEventListener("resize", widthPositionBtnCoffe)
