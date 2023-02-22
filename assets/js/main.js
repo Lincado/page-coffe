@@ -21,12 +21,12 @@ const divLogo = document.querySelector(".logo")
 const divBuyMyCoffee = document.createElement("div")
 const ul = document.querySelector("ul")
 const main = document.querySelector("main")
-
+const minWidthMediaQuery = "(min-width: 951px)"
 divBuyMyCoffee.innerHTML = `<a href="#" class="btn-my-coffee">PEGAR MEU CAFÉ</a>`
 
 
-function widthPositionBtnCoffe(){
-    if(window.matchMedia("(min-width: 951px)").matches) {
+function positionBuyMyCoffeeButton(){
+    if(window.matchMedia(minWidthMediaQuery).matches) {
         divLogo.innerHTML = `<img src="./assets/img/logo-desktop.svg" alt="logo da loja de café">`
         header.insertBefore(divBuyMyCoffee, ul.nextElementSibling)
     } else {
@@ -35,5 +35,5 @@ function widthPositionBtnCoffe(){
     }
 }
 
-widthPositionBtnCoffe()
-window.addEventListener("resize", widthPositionBtnCoffe)
+positionBuyMyCoffeeButton()
+window.addEventListener("resize", positionBuyMyCoffeeButton)
