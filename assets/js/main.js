@@ -1,5 +1,5 @@
 const p = document.querySelector(".inner-p")
-p.innerText = "<Great Code/>"
+p.innerHTML = "&lt;Great Code/&gt;"
 
 const btnMenuMobile = document.querySelector("#btn-menu-mobile")
 
