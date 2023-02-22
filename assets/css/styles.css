@@ -148,6 +148,7 @@ a {
 @media (max-width: 950px) {
     .menu {
         width: 100%;
+        padding-bottom: 5rem;
     }
     .logo {
         max-width: 15rem;
